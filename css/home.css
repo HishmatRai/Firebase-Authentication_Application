@@ -1,0 +1,25 @@
+#navBarColor{
+    background-color:#2c6c80;
+    }
+    li{
+  list-style: none;
+  border: 1px dotted #2c6c80; 
+  /* border-bottom: none; */
+  font-weight: bold;
+  font-size: 20px;
+}
+#divForShowData{
+  margin-top: 50px;
+width: 90%;
+margin-left: 3%;
+}
+h1{
+  background-color:#2c6c80;
+color: white;
+font-weight: bold; 
+}
+#userName{
+  font-size: 20px;
+  font-weight: bold
+
+}

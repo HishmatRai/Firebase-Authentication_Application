@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Todo</title>
+  <!-----------------------------Sweet alert--------------------------- - -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  	<!-----------------------------Firebase database--------------------------- - -->
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAmP-TFI9DgaHHYdnDELT2-ke7xZwd8HiI",
+    authDomain: "fir-application-d119c.firebaseapp.com",
+    databaseURL: "https://fir-application-d119c.firebaseio.com",
+    projectId: "fir-application-d119c",
+    storageBucket: "fir-application-d119c.appspot.com",
+    messagingSenderId: "613906334312",
+    appId: "1:613906334312:web:e26ab8ee75e3382e"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./../css/todo.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" id="navBarColor">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+
+      <li onclick="homePage()"><a href="#"><span class="glyphicon glyphicon-user"></span> Home</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Create Todo</a></li>
+     
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user" id="userName"></span ></a></li>
+
+      <!-- <li onclick="logout()"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li> -->
+      <li onclick="logout()"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Log Out</a></li>
+
+    </ul>
+  </div>
+</nav>
+<center>
+  <h1>WEL COME TO TODO PAGE</h1>
+  <input type="text" placeholder="Enter Your data ....."  id="input">
+  <input type="button" value="Add" id="btn">
+  <div id="loading">
+    
+      <img src="./../images/1_W8cj-FRc58UozzcMWqVPZw.gif" alt="">
+    </div>
+      </center>
+<div id="divForShowData">
+<ul id="ul">
+</ul>
+</div>
+</body>
+
+<script src="./../js/todo.js"></script>
+
+</html>
