@@ -22,11 +22,11 @@ const dataBase = firebase.database().ref(`/`);
 dataBase.child(`CurrentUser/${res.user.uid}`).set(obj);
 
 // Sweet alert
-swal({
-    title: "Sucessfully Sign Up",
-    icon: "success",
-    button: "Ok",
-  });
+// swal({
+//     title: "Sucessfully Sign Up",
+//     icon: "success",
+//     button: "Ok",
+//   });
 
 window.location.href = './../login/login.html';
 
