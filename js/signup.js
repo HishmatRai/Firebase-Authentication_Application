@@ -1,5 +1,5 @@
-let firstName = document.getElementById("firstName");
-let lastName = document.getElementById("lastName");
+let fulltName = document.getElementById("fulltName");
+let contactNum = document.getElementById("contactNum");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let btn = document.getElementById("btn");
@@ -10,12 +10,17 @@ const dataBase = firebase.database().ref(`/`);
 
  btn.addEventListener('click', ()=>{     
     let obj = {
+      fulltName : fulltName.value,
+      contactNum : contactNum.value,
         email : email.value,
         password : password.value
+
     }
+    console.log(obj)
     firebase.auth().createUserWithEmailAndPassword(obj.email, obj.password)
     .then((res)=>{
 dataBase.child(`CurrentUser/${res.user.uid}`).set(obj);
+
 // Sweet alert
 swal({
     title: "Sucessfully Sign Up",

@@ -31,7 +31,7 @@ btn.addEventListener('click',()=>{
 
 setTimeout(()=>{
   
-  window.location.href = './../home/home.html'
+  window.location.href = './../home/index.html'
 },2000)
 
   // Sweet end
