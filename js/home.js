@@ -1,17 +1,18 @@
-// function createtodo(){
-//     window.location.href="./../todo/todo.html"
-// }
-// setTimeout(() => {
-//     document.getElementById("divForShowData").style.display = "block"
-//     document.getElementById("loading").style.display = "none"
-// }, 900)
+function createtodo(){
+    window.location.href="./../todo/todo.html"
+}
+setTimeout(() => {
+    document.getElementById("divForShowData").style.display = "block"
+    document.getElementById("loading").style.display = "none"
+}, 900)
 
 
 
 const dataBase = firebase.database().ref(`/`);
 var userData = localStorage.getItem('userData');
 userData = JSON.parse(userData)
-dataBase.child("CurrentUser/"+userData.id+"/Post").on(`child_added`,(snap)=>{
+console.log(userData)
+dataBase.child("CurrentUser/"+userData.id+"/Todo").on(`child_added`,(snap)=>{
     var data =  snap.val();
     data.id = snap.key;
     console.log(data.input)
@@ -53,8 +54,7 @@ function logout(){
 }
 
 document.getElementById("userName").innerHTML = userData.email.slice(0,-10).toUpperCase();
-document.getElementById("userEmail").innerHTML = userData.email;
-userEmail
+
 
 
 
